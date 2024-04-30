@@ -83,14 +83,14 @@
 		font-family: var(--font-secondary);
 		line-height: 1;
 		font-weight: normal;
-		font-size: clamp(2.25rem, 6.009vw + 0.842rem, 6.25rem);
-		line-height: clamp(2.25rem, 6.009vw + 0.842rem, 6.25rem);
+		font-size: clamp(2.25rem, 6.009vw + 0.842rem, 5.5rem);
+		line-height: clamp(2.25rem, 6.009vw + 0.842rem, 5.5rem);
 		margin: 0;
 		white-space: nowrap;
 	}
 
 	h3 {
-		font-size: clamp(1.125rem, 0.8409rem + 1.0101vw, 1.75rem);
+		font-size: clamp(1.125rem, 0.8409rem + 1.0101vw, 1.55rem);
 	}
 
 	@media screen and (min-width: 1500px) {
