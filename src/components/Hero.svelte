@@ -104,7 +104,8 @@
 
 	@media screen and (max-width: 767px) {
 		.hero {
-			height: calc(90dvh - var(--gap-lg));
+			height: calc(90vh - var(--gap-lg));
+			height: calc(90svh - var(--gap-lg));
 			min-height: 560px;
 			text-align: center;
 			row-gap: var(--gap-lg);
