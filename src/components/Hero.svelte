@@ -3,7 +3,7 @@
 	import SparklyText from './SparklyText.svelte';
 </script>
 
-<section class="hero">
+<section class="hero" style={`background-image: url(${HERO.images.bg})`}>
 	<div class="hero-inner">
 		<div class="hero-text">
 			<h2>
@@ -26,8 +26,7 @@
 
 <style>
 	.hero {
-		background-image: url('/mesh-149.webp');
-		background-size: cover;
+		background-size: 100% 100%;
 		position: relative;
 		padding: 0 var(--gap-lg);
 		display: flex;
