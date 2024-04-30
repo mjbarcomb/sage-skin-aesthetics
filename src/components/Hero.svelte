@@ -119,9 +119,9 @@
 		}
 	}
 
-	@media screen and (max-width: 420px) {
+	@media screen and (max-width: 460px) {
 		h3 {
-			max-width: 31ch;
+			max-width: 32ch;
 		}
 	}
 </style>
