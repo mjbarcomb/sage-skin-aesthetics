@@ -122,8 +122,8 @@
 			max-width: 450px;
 		}
 
-		.hero-text {
-			margin-top: 0.5em;
+		h3 {
+			margin-top: 0.25em;
 		}
 	}
 
