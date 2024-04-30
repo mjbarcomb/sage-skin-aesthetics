@@ -1,5 +1,6 @@
 <script>
-	import SparklyText from '../components/SparklyText.svelte';
+	import { HERO } from '../lib/constants';
+	import SparklyText from './SparklyText.svelte';
 </script>
 
 <section class="hero">
@@ -14,20 +15,18 @@
 				>
 			</h2>
 			<h3>
-				Voluptate irure exercitation ipsum anim voluptate eu id sit aliqua duis non veniam veniam.
-				Qui ad duis irure sint magna nulla minim laboris do. Veniam qui adipisicing consectetur
-				commodo voluptate enim enim.
+				{HERO.text}
 			</h3>
 		</div>
 		<div class="hero-image">
-			<img src="/brie.webp" height="589" width="465" alt="" />
+			<img src={HERO.images.main} height="589" width="465" alt="" />
 		</div>
 	</div>
 </section>
 
 <style>
 	.hero {
-		background-image: url("/mesh-149.webp");
+		background-image: url('/mesh-149.webp');
 		background-size: cover;
 		position: relative;
 		padding: 0 var(--gap-lg);
@@ -88,6 +87,10 @@
 		white-space: nowrap;
 	}
 
+	h3 {
+		font-size: clamp(1.125rem, 0.8409rem + 1.0101vw, 1.75rem);
+	}
+
 	@media screen and (min-width: 768px) and (max-width: 1000px) {
 		.hero-image {
 			translate: -20% 0;
@@ -113,12 +116,6 @@
 		.hero-image {
 			min-width: 0;
 			max-width: 450px;
-		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		h3 {
-			font-size: var(--text-size-300);
 		}
 	}
 </style>

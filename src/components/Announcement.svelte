@@ -1,5 +1,5 @@
 <script>
-	import Icon from '../components/Icon.svelte';
+	import Icon from './Icon.svelte';
 	import dateFormat, { masks } from 'dateformat';
 	export let announcement;
 
