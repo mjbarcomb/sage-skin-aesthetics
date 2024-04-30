@@ -1,6 +1,6 @@
 <script>
 	import Icon from '../components/Icon.svelte';
-	import dateFormat, { masks } from 'dateFormat';
+	import dateFormat, { masks } from 'dateformat';
 	export let announcement;
 
 	let dialog;
