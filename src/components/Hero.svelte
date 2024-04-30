@@ -68,7 +68,9 @@
 	.hero-image {
 		align-self: end;
 		min-width: 550px;
-		transition: translate 0.3s ease;
+		transition:
+			translate 0.3s ease,
+			max-width 0.3s ease;
 	}
 
 	img {
@@ -102,6 +104,8 @@
 
 	@media screen and (max-width: 767px) {
 		.hero {
+			height: calc(90dvh - var(--gap-lg));
+			min-height: 560px;
 			text-align: center;
 			row-gap: var(--gap-lg);
 			padding: 0 var(--gap);
@@ -109,13 +113,18 @@
 		}
 		.hero .hero-inner {
 			grid-template-columns: 1fr;
-			align-content: start;
 			justify-items: center;
 		}
 
 		.hero-image {
 			min-width: 0;
 			max-width: 450px;
+		}
+	}
+
+	@media screen and (max-width: 767px) and (max-height: 700px) {
+		.hero-image {
+			max-width: 250px;
 		}
 	}
 
