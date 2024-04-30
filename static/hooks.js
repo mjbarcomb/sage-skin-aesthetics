@@ -11,7 +11,7 @@ function ensureIntersectionObserver() {
 	});
 }
 
-export function viewport(element) {
+function viewport(element) {
 	ensureIntersectionObserver();
 
 	intersectionObserver.observe(element);
