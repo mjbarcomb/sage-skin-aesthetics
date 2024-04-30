@@ -121,6 +121,10 @@
 			min-width: 0;
 			max-width: 450px;
 		}
+
+		.hero-text {
+			margin-top: 0.5em;
+		}
 	}
 
 	@media screen and (max-width: 767px) and (max-height: 700px) {
