@@ -67,7 +67,7 @@
 
 	.hero-image {
 		align-self: end;
-		min-width: 450px;
+		min-width: 550px;
 		transition: translate 0.3s ease;
 	}
 
