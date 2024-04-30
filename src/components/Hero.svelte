@@ -124,6 +124,7 @@
 
 		h3 {
 			margin-top: 0.25em;
+			max-width: 45ch;
 		}
 	}
 
