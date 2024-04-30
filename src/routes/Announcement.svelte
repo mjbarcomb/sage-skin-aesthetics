@@ -1,0 +1,81 @@
+<script>
+	import Icon from '../components/Icon.svelte';
+	import dateFormat, { masks } from 'dateFormat';
+	export let announcement;
+
+	let dialog;
+</script>
+
+{#if announcement}
+	<dialog open bind:this={dialog}>
+		<h3>
+			<Icon i="brand_awareness" size={1.35} />{announcement.title || 'Announcement'}
+		</h3>
+		<p class="date">{dateFormat(announcement.publishedAt, masks.mediumDate)}</p>
+		<p>{announcement.text}</p>
+		<button on:click={() => dialog.close()}><Icon i="close" size={1.7} /></button>
+	</dialog>
+{/if}
+
+<style>
+	dialog {
+		background-color: rgba(255, 255, 255, 0.95);
+		border: 0;
+		box-shadow: var(--shadow-elevation-high);
+		gap: var(--gap-md);
+		padding: var(--gap);
+		z-index: 1;
+		position: fixed;
+		bottom: var(--gap);
+		width: 70ch;
+		max-width: calc(100vw - (calc(var(--gap) * 2)));
+		backdrop-filter: blur(20px) saturate(3.5);
+	}
+	dialog[open] {
+		display: grid;
+	}
+
+	button {
+		position: absolute;
+		inset: var(--gap-sm) var(--gap-sm) auto auto;
+		height: 42px;
+		width: 42px;
+		display: grid;
+		place-items: center;
+		border: 0;
+		background-color: transparent;
+
+		&:focus {
+			outline: 2px dotted currentColor;
+		}
+	}
+
+	h3 {
+		font-size: var(--text-size-300);
+		font-weight: 500;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: var(--gap-sm);
+	}
+
+	dialog :global([data-icon='brand_awareness']) {
+		rotate: -45deg;
+	}
+	.date {
+		font-size: var(--text-size-base);
+		font-weight: 500;
+	}
+	p {
+		font-size: var(--text-size-200);
+		font-weight: 400;
+		margin: 0;
+	}
+	@media screen and (max-width: 767px) {
+		dialog {
+			width: 100%;
+			bottom: 0;
+			max-width: none;
+		}
+	}
+</style>
