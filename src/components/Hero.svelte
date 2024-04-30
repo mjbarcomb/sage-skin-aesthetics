@@ -70,7 +70,7 @@
 		min-width: 550px;
 		transition:
 			translate 0.3s ease,
-			max-width 0.3s ease;
+			scale 0.3s ease;
 	}
 
 	img {
@@ -91,6 +91,13 @@
 
 	h3 {
 		font-size: clamp(1.125rem, 0.8409rem + 1.0101vw, 1.75rem);
+	}
+
+	@media screen and (min-width: 1500px) {
+		.hero-image {
+			scale: 1.15;
+			transform-origin: bottom;
+		}
 	}
 
 	@media screen and (min-width: 768px) and (max-width: 1000px) {
