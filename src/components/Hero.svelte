@@ -118,4 +118,10 @@
 			max-width: 450px;
 		}
 	}
+
+	@media screen and (max-width: 420px) {
+		h3 {
+			max-width: 31ch;
+		}
+	}
 </style>
