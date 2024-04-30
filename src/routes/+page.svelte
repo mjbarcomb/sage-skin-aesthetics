@@ -10,7 +10,6 @@
 <svelte:head>
 	<title>Sage Skin Aesthetics - Esthetician located in Tampa, Florida</title>
 	<meta name="description" content="Svelte demo app" />
-	<script src="/src/lib/sparkly-text.js"></script>
 </svelte:head>
 
 <Hero />
