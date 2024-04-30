@@ -20,14 +20,14 @@
 			</h3>
 		</div>
 		<div class="hero-image">
-			<img src="/src/lib/images/brie.webp" height="589" width="465" alt="" />
+			<img src="/brie.webp" height="589" width="465" alt="" />
 		</div>
 	</div>
 </section>
 
 <style>
 	.hero {
-		background-image: url(/src/lib/images/mesh-149.webp);
+		background-image: url("/mesh-149.webp");
 		background-size: cover;
 		position: relative;
 		padding: 0 var(--gap-lg);

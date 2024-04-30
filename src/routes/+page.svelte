@@ -26,7 +26,7 @@
 
 <style>
 	:global(section.marquee) {
-		background: url('/src/lib/images/mesh-459.webp');
+		background: url('/mesh-459.webp');
 		padding: var(--gap) 0;
 		font-size: var(--text-size-100);
 		font-weight: 500;
