@@ -12,19 +12,23 @@
 
 <Hero />
 
-<Section flush classList="marquee">
+<div class="marquee">
 	<MarqueeTextWidget repeat={10} duration={10}>
 		Radiant skin, renewed energy ✨ Healthy glow, happy mind ✨
 	</MarqueeTextWidget>
-</Section>
+</div>
 
 <style>
-	:global(section.marquee) {
-		background: url('/mesh-459.webp');
-		padding: var(--gap) 0;
-		font-size: var(--text-size-100);
+	.marquee {
+		background: url(/mesh-459.webp);
+		font-size: var(--text-size-90);
 		font-weight: 500;
 		letter-spacing: 2px;
 		text-transform: uppercase;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 </style>

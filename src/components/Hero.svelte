@@ -19,7 +19,7 @@
 			</h3>
 		</div>
 		<div class="hero-image">
-			<img src={HERO.images.main} height="589" width="465" alt="" />
+			<img src={HERO.images.main} alt="" />
 		</div>
 	</div>
 </section>
@@ -134,9 +134,9 @@
 		}
 	}
 
-	@media screen and (max-width: 767px) and (max-height: 700px) {
+	@media screen and (max-width: 767px) and (max-height: 800px) {
 		.hero-image {
-			max-width: 250px;
+			max-width: 280px;
 		}
 	}
 

@@ -19,9 +19,10 @@
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
+		height: clamp(3.75rem, 3.0851rem + 2.1277vw, 5rem);
 		background-color: #41684a9c;
 		backdrop-filter: blur(20px);
-		padding: 24px;
+		padding: 0 var(--gap);
 		line-height: 1;
 		z-index: 1;
 	}
