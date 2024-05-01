@@ -1,5 +1,7 @@
 <script>
 	import { HERO } from '../lib/constants';
+	import Link from './Link.svelte';
+	import Seal from './Seal.svelte';
 	import SparklyText from './SparklyText.svelte';
 </script>
 
@@ -20,6 +22,13 @@
 		</div>
 		<div class="hero-image">
 			<img src={HERO.images.main} alt="" />
+			<div class="hero-seal">
+				<Seal
+					size={220}
+					font={0.8}
+					text="BRIANNA owner, acne expert, and acne expert of 2023 finalist"
+				/>
+			</div>
 		</div>
 	</div>
 </section>
@@ -73,6 +82,19 @@
 	}
 
 	img {
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero-seal {
+		position: absolute;
+		font-weight: 500;
+		translate: 50px -580px;
+		z-index: 0;
+		transition: translate 0.3s ease;
+	}
+
+	img {
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
@@ -103,6 +125,9 @@
 		.hero-image {
 			translate: -20% 0;
 		}
+		.hero-seal {
+			translate: 92px -679px;
+		}
 		h3 {
 			max-width: 32ch;
 		}
@@ -128,6 +153,10 @@
 			max-width: 450px;
 		}
 
+		.hero-seal {
+			translate: 50px -480px;
+		}
+
 		h3 {
 			margin-top: 0.25em;
 			max-width: 45ch;
@@ -143,6 +172,9 @@
 	@media screen and (max-width: 460px) {
 		h3 {
 			max-width: 32ch;
+		}
+		.hero-seal {
+			translate: -30px -271px;
 		}
 	}
 </style>

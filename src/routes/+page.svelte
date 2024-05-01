@@ -12,11 +12,11 @@
 
 <Hero />
 
-<div class="marquee">
+<!-- <div class="marquee">
 	<MarqueeTextWidget repeat={10} duration={10}>
 		Radiant skin, renewed energy ✨ Healthy glow, happy mind ✨
 	</MarqueeTextWidget>
-</div>
+</div> -->
 
 <style>
 	.marquee {

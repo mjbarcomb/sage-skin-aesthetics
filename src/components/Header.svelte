@@ -24,7 +24,7 @@
 		backdrop-filter: blur(20px);
 		padding: 0 var(--gap);
 		line-height: 1;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	nav {
