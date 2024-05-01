@@ -126,13 +126,10 @@
 
 	@media screen and (min-width: 768px) and (max-width: 1000px) {
 		.hero-image {
-			translate: -30% 27%;
+			translate: -19% 22%;
 		}
 		.hero-seal {
-			translate: 175px -840px;
-		}
-		h3 {
-			max-width: 32ch;
+			translate: 99% -359%;
 		}
 	}
 
