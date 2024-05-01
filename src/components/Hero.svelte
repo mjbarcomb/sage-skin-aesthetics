@@ -91,7 +91,9 @@
 		font-weight: 500;
 		translate: 50px -580px;
 		z-index: 0;
-		transition: translate 0.3s ease;
+		transition:
+			translate 0.3s ease,
+			scale 0.3s ease;
 	}
 
 	img {
@@ -115,7 +117,8 @@
 	}
 
 	@media screen and (min-width: 1500px) {
-		.hero-image {
+		.hero-image,
+		.hero-seal {
 			scale: 1.15;
 			transform-origin: bottom;
 		}
@@ -123,10 +126,10 @@
 
 	@media screen and (min-width: 768px) and (max-width: 1000px) {
 		.hero-image {
-			translate: -20% 0;
+			translate: -30% 27%;
 		}
 		.hero-seal {
-			translate: 92px -679px;
+			translate: 175px -840px;
 		}
 		h3 {
 			max-width: 32ch;
@@ -167,14 +170,15 @@
 		.hero-image {
 			max-width: 280px;
 		}
+
+		.hero-seal {
+			translate: -40px -283px;
+		}
 	}
 
 	@media screen and (max-width: 460px) {
 		h3 {
 			max-width: 32ch;
-		}
-		.hero-seal {
-			translate: -30px -271px;
 		}
 	}
 </style>
