@@ -28,7 +28,8 @@
 		border-radius: 50px;
 		font-size: var(--text-size-200);
 		font-weight: 500;
-		background: #478d00;
+		background: var(--color-white);
+		color: var(--color-black);
 		padding: 0 var(--gap);
 		height: 52px;
 	}
