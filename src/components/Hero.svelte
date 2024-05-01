@@ -129,7 +129,7 @@
 			translate: -19% 22%;
 		}
 		.hero-seal {
-			translate: 99% -359%;
+			translate: 80% -359%;
 		}
 	}
 
