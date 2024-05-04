@@ -170,6 +170,7 @@
 
 		.hero-seal {
 			scale: 0.7;
+			translate: -40px -520px;
 		}
 	}
 
@@ -203,15 +204,10 @@
 		}
 	}
 
-	@media screen and (max-width: 445px) {
+	@media screen and (max-width: 375px) {
 		.hero-seal {
-			translate: -40px -485px;
-		}
-	}
-
-	@media screen and (min-width: 446px) and (max-width: 767px) {
-		.hero-seal {
-			translate: -20px -535px;
+			translate: -70px -415px;
+			scale: 0.6;
 		}
 	}
 </style>
