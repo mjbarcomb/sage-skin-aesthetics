@@ -5,7 +5,7 @@
 	export let speed = 50;
 	export let size = 130;
 	export let font = 0.7;
-	export let id;
+	export let id = '';
 	export let text = '';
 	export let repeat = 1;
 	export let separator = ' • ';

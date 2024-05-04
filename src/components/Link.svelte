@@ -8,7 +8,7 @@
 <a data-button={asButton ? '' : undefined} {href} target={newTab && '_blank'}>
 	<slot />
 	{#if newTab}
-		<IconOpenInNew font-size=".8em" stroke-width="2" />
+		<IconOpenInNew font-size=".8em" />
 	{/if}
 </a>
 

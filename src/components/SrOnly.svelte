@@ -1,6 +1,6 @@
 <script>
-	export let id;
-	export let text;
+	export let id = '';
+	export let text = '';
 </script>
 
 <span {id} class="sr-only">

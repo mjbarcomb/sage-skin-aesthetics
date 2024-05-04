@@ -34,7 +34,6 @@
 					ariaHidden
 					size={260}
 					font={0.8}
-					emphasizeFirstWord
 					text="Brianna • Owner, acne expert, and finalist for 2023 acne expert of the year"
 				/>
 			</div>
@@ -134,7 +133,7 @@
 	/* Safari Fix */
 	.hero-text :global(.emphasize) {
 		padding-left: 0.45ch;
-		margin-left: -0.47ch;
+		margin-left: -0.45ch;
 	}
 
 	@media screen and (max-width: 460px) {

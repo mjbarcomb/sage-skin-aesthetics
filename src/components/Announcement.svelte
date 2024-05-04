@@ -1,7 +1,23 @@
 <script>
-	import Icon from './Icon.svelte';
+	import { onMount } from 'svelte';
 	import dateFormat, { masks } from 'dateformat';
-	export let announcement;
+	import IconClose from '~icons/material-symbols/close';
+
+	import { client } from '../lib/sanityClient';
+
+	let announcement;
+
+	onMount(async () => {
+		const query = `*[_type == "announcement"]`;
+
+		try {
+			const data = await client.fetch(query);
+
+			announcement = data[0];
+		} catch (error) {
+			console.error('Error fetching data from Sanity:', error);
+		}
+	});
 
 	let dialog;
 </script>
@@ -9,11 +25,11 @@
 {#if announcement}
 	<dialog open bind:this={dialog}>
 		<h3>
-			<Icon i="brand_awareness" size={1.35} />{announcement.title || 'Announcement'}
+			{announcement.title}
 		</h3>
-		<p class="date">{dateFormat(announcement.publishedAt, masks.mediumDate)}</p>
-		<p>{announcement.text}</p>
-		<button on:click={() => dialog.close()}><Icon i="close" size={1.7} /></button>
+		<p class="date">{dateFormat(announcement._updatedAt, masks.mediumDate)}</p>
+		<p>{announcement.message}</p>
+		<button on:click={() => dialog.close()}><IconClose font-size="1.25em" /></button>
 	</dialog>
 {/if}
 

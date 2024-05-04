@@ -4,7 +4,7 @@
 </script>
 
 <div class="book-appointment">
-	<Link classList="book-appointment" href={BOOKING_LINK} newTab asButton>Book Now</Link>
+	<Link href={BOOKING_LINK} newTab asButton>Book Now</Link>
 </div>
 
 <style>
