@@ -36,7 +36,7 @@
 <style>
 	dialog {
 		align-content: start;
-		background-color: rgba(255, 255, 255, 0.95);
+		background-color: rgba(239, 237, 236, 0.9);
 		border: 0;
 		box-shadow: var(--shadow-elevation-high);
 		gap: var(--gap-md);
@@ -70,7 +70,7 @@
 	}
 
 	h3 {
-		font-size: var(--text-size-300);
+		font-size: var(--text-size-200);
 		font-weight: 500;
 		margin: 0;
 		display: flex;
@@ -82,13 +82,14 @@
 		rotate: -45deg;
 	}
 	.date {
-		font-size: var(--text-size-base);
+		font-size: var(--text-size-100);
 		font-weight: 500;
 	}
 	p {
 		font-size: var(--text-size-200);
 		font-weight: 400;
 		margin: 0;
+		padding-right: 40px;
 	}
 	@media screen and (max-width: 767px) {
 		dialog {

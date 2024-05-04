@@ -154,6 +154,7 @@
 		}
 		.hero .hero-inner {
 			grid-template-columns: 1fr;
+			row-gap: var(--gap);
 			justify-items: center;
 		}
 
@@ -165,16 +166,6 @@
 		h2 {
 			margin-top: 0.25em;
 			max-width: 45ch;
-		}
-	}
-
-	@media screen and (max-width: 767px) and (max-height: 800px) {
-		.hero-image {
-			max-width: 280px;
-		}
-
-		.hero-seal {
-			translate: -80px -300px;
 		}
 	}
 
@@ -200,15 +191,17 @@
 
 	@media screen and (max-width: 375px) {
 		.hero-seal {
-			translate: -70px -415px;
 			scale: 0.6;
 		}
 	}
 
-	@media screen and (min-width: 376px) and (max-width: 767px) {
+	@media screen and (max-width: 767px) {
 		.hero-seal {
 			scale: 0.7;
-			translate: -40px -520px;
+			translate: -60px -445px;
+		}
+		.hero-image {
+			max-width: 320px;
 		}
 	}
 </style>
