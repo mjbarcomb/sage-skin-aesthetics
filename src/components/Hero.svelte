@@ -1,6 +1,6 @@
 <script>
 	import { HERO } from '../lib/constants';
-	import Link from './Link.svelte';
+	import SrOnly from './SrOnly.svelte';
 	import Seal from './Seal.svelte';
 	import SparklyText from './SparklyText.svelte';
 </script>
@@ -8,25 +8,34 @@
 <section class="hero" style={`background-image: url(${HERO.images.bg})`}>
 	<div class="hero-inner">
 		<div class="hero-text">
+			<span class="hero-tagline" aria-hidden="true"
+				>Where skin <SparklyText
+					ariaHidden
+					classList="emphasize"
+					sparklyTextSize=".5em"
+					numberOfSparkles="2">glows</SparklyText
+				>
+				<br />
+				and energy <u class="emphasize" id="flow">flows</u>
+			</span>
+			<SrOnly text="Where skin glows and energy flows" />
 			<h2>
-				Where skin <SparklyText classList="emphasize" sparklyTextSize=".5em" numberOfSparkles="2"
-					>glows</SparklyText
-				>
-				<br /><span class="hero-text-line-2"
-					>and energy <u class="emphasize" id="flow">flows</u></span
-				>
-			</h2>
-			<h3>
 				{HERO.text}
-			</h3>
+			</h2>
 		</div>
 		<div class="hero-image">
-			<img src={HERO.images.main} alt="" />
+			<img
+				src={HERO.images.main}
+				aria-describedby="hero-seal"
+				alt="Brianna. Owner, acne expert, and finalist for 2023 acne expert of the year"
+			/>
 			<div class="hero-seal">
 				<Seal
-					size={220}
+					ariaHidden
+					size={260}
 					font={0.8}
-					text="BRIANNA owner, acne expert, and acne expert of 2023 finalist"
+					emphasizeFirstWord
+					text="Brianna • Owner, acne expert, and finalist for 2023 acne expert of the year"
 				/>
 			</div>
 		</div>
@@ -57,7 +66,7 @@
 		grid-template-columns: 1.5fr 1fr;
 		column-gap: var(--gap);
 		align-items: center;
-		max-width: 1440px;
+		max-width: var(--content-max-width);
 		min-width: 0;
 	}
 
@@ -67,10 +76,6 @@
 		@supports (text-wrap: balance) {
 			text-wrap: balance;
 		}
-	}
-
-	.hero-text-line-2 {
-		margin-left: 0.75ch;
 	}
 
 	.hero-image {
@@ -89,11 +94,13 @@
 	.hero-seal {
 		position: absolute;
 		font-weight: 500;
-		translate: 50px -580px;
+		translate: 50px -620px;
 		z-index: 0;
 		transition:
 			translate 0.3s ease,
 			scale 0.3s ease;
+		color: #bdd9b8;
+		will-change: translate, scale;
 	}
 
 	img {
@@ -102,34 +109,38 @@
 		object-fit: contain;
 	}
 
-	h2 {
+	.hero-tagline {
 		font-family: var(--font-secondary);
+		font-weight: 600;
 		line-height: 1;
-		font-weight: normal;
-		font-size: clamp(2.25rem, 6.009vw + 0.842rem, 5.5rem);
-		line-height: clamp(2.25rem, 6.009vw + 0.842rem, 5.5rem);
+		font-size: var(--text-size-clamp-lg);
+		line-height: var(--text-size-clamp-lg);
 		margin: 0;
 		white-space: nowrap;
+		text-indent: -0.35ch;
+		margin-left: 0.35ch;
 	}
 
-	h3 {
-		font-size: clamp(1.125rem, 0.8409rem + 1.0101vw, 1.55rem);
+	h2 {
+		font-size: var(--text-size-clamp-sm);
 	}
 
-	@media screen and (min-width: 1500px) {
-		.hero-image,
-		.hero-seal {
-			scale: 1.15;
-			transform-origin: bottom;
+	.hero-text :global(.emphasize),
+	u {
+		font-style: italic;
+	}
+
+	@media screen and (max-width: 460px) {
+		h2 {
+			max-width: 32ch;
 		}
 	}
 
-	@media screen and (min-width: 768px) and (max-width: 1000px) {
-		.hero-image {
-			translate: -19% 22%;
-		}
+	@media screen and (max-width: 500px) {
 		.hero-seal {
-			translate: 80% -359%;
+			translate: -2vh -46vh;
+			translate: -2svh -46svh;
+			scale: 0.8;
 		}
 	}
 
@@ -153,13 +164,14 @@
 			max-width: 450px;
 		}
 
-		.hero-seal {
-			translate: 50px -480px;
-		}
-
-		h3 {
+		h2 {
 			margin-top: 0.25em;
 			max-width: 45ch;
+		}
+
+		.hero-seal {
+			translate: 20px -545px;
+			transition: none;
 		}
 	}
 
@@ -169,13 +181,27 @@
 		}
 
 		.hero-seal {
-			translate: -40px -283px;
+			translate: -80px -300px;
+			scale: 0.8;
 		}
 	}
 
-	@media screen and (max-width: 460px) {
-		h3 {
-			max-width: 32ch;
+	@media screen and (min-width: 768px) and (max-width: 1000px) {
+		.hero-image {
+			translate: -100px 80px;
+		}
+		.hero-seal {
+			translate: 120px -720px;
+		}
+	}
+
+	@media screen and (min-width: 1500px) {
+		.hero-image,
+		.hero-seal {
+			scale: 1.15;
+		}
+		.hero-seal {
+			translate: 80px -650px;
 		}
 	}
 </style>

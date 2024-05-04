@@ -1,36 +1,37 @@
 <script>
+	import SrOnly from './SrOnly.svelte';
+
+	export let ariaHidden = false;
 	export let speed = 50;
 	export let size = 130;
 	export let font = 0.7;
+	export let id;
 	export let text = '';
 	export let repeat = 1;
 	export let separator = ' • ';
 
 	let array = [];
 	$: array = [...Array(repeat)].map((_) => [...text].concat([...separator])).flat();
-
-	const isUpperCase = (string) => /^[A-Z]*$/.test(string);
 </script>
 
 <div class="seal" style="--size: {size}px; --speed: {speed * 1000}ms; --font: {font}em">
 	{#each array as char, index}
-		<div
-			data-emphasize={isUpperCase(char) ? '' : undefined}
-			class="char"
-			style="--angle: {`${(1 / array.length) * index}turn`}"
-		>
+		<div aria-hidden="true" class="char" style="--angle: {`${(1 / array.length) * index}turn`}">
 			{char}
 		</div>
 	{/each}
+	{#if !ariaHidden}
+		<SrOnly {id} {text} />
+	{/if}
 </div>
 
 <style>
 	@keyframes rotation {
 		0% {
-			transform: rotate(0turn);
+			transform: rotate(1turn);
 		}
 		100% {
-			transform: rotate(1turn);
+			transform: rotate(0turn);
 		}
 	}
 	.seal {

@@ -3,7 +3,7 @@
 	export let data;
 </script>
 
-<PageTitle title="Contact" />
+<PageTitle text="Let's talk skin" />
 
 <style>
 </style>

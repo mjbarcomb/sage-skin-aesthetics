@@ -1,6 +1,5 @@
 <script>
-	import Icon from './Icon.svelte';
-
+	import IconOpenInNew from '~icons/material-symbols/open-in-new';
 	export let asButton = false;
 	export let href;
 	export let newTab = false;
@@ -9,7 +8,7 @@
 <a data-button={asButton ? '' : undefined} {href} target={newTab && '_blank'}>
 	<slot />
 	{#if newTab}
-		<Icon i="open_in_new" size={0.9} />
+		<IconOpenInNew font-size=".8em" stroke-width="2" />
 	{/if}
 </a>
 
@@ -30,11 +29,34 @@
 		font-weight: 500;
 		background: var(--color-white);
 		color: var(--color-black);
-		padding: 0 var(--gap);
-		height: 52px;
+		padding: 0 1.12em;
+		height: 2.438em;
+		white-space: nowrap;
+
+		&:hover,
+		&:focus {
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.075);
+			}
+		}
+		&:focus {
+			outline: 2px dotted var(--color-black);
+			outline-offset: -4px;
+		}
 	}
 	a :global(.icon) {
 		font-weight: 500;
 		translate: 0 0.5px;
+	}
+
+	@media screen and (max-width: 767px) {
+		[data-button] {
+			font-size: var(--text-size-100);
+		}
 	}
 </style>

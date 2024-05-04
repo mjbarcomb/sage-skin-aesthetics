@@ -1,8 +1,6 @@
 <script>
 	export let data;
 	import Hero from '../components/Hero.svelte';
-	import Section from '../components/Section.svelte';
-	import MarqueeTextWidget from 'svelte-marquee-text-widget';
 </script>
 
 <svelte:head>
@@ -11,12 +9,6 @@
 </svelte:head>
 
 <Hero />
-
-<!-- <div class="marquee">
-	<MarqueeTextWidget repeat={10} duration={10}>
-		Radiant skin, renewed energy ✨ Healthy glow, happy mind ✨
-	</MarqueeTextWidget>
-</div> -->
 
 <style>
 	.marquee {
