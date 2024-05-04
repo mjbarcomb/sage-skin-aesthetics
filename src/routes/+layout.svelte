@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import { inject } from '@vercel/analytics';
 	import Header from '../components/Header.svelte';
 	import BookAppointment from '../components/BookAppointment.svelte';
 	import Announcement from '../components/Announcement.svelte';
