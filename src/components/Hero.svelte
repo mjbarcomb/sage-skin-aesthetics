@@ -94,7 +94,8 @@
 	.hero-seal {
 		position: absolute;
 		font-weight: 500;
-		translate: 50px -620px;
+		translate: 30px -620px;
+		scale: 0.8;
 		z-index: 0;
 		transition:
 			translate 0.3s ease,
@@ -142,14 +143,6 @@
 		}
 	}
 
-	@media screen and (max-width: 500px) {
-		.hero-seal {
-			translate: -2vh -46vh;
-			translate: -2svh -46svh;
-			scale: 0.8;
-		}
-	}
-
 	@media screen and (max-width: 767px) {
 		.hero {
 			height: calc(90vh - var(--gap-lg));
@@ -176,8 +169,7 @@
 		}
 
 		.hero-seal {
-			translate: 20px -545px;
-			transition: none;
+			scale: 0.7;
 		}
 	}
 
@@ -188,7 +180,18 @@
 
 		.hero-seal {
 			translate: -80px -300px;
-			scale: 0.8;
+		}
+	}
+
+	@media screen and (max-width: 445px) {
+		.hero-seal {
+			translate: -40px -485px;
+		}
+	}
+
+	@media screen and (min-width: 446px) and (max-width: 767px) {
+		.hero-seal {
+			translate: -20px -535px;
 		}
 	}
 
@@ -197,7 +200,7 @@
 			translate: -100px 80px;
 		}
 		.hero-seal {
-			translate: 120px -720px;
+			translate: 70px -770px;
 		}
 	}
 
@@ -207,7 +210,8 @@
 			scale: 1.15;
 		}
 		.hero-seal {
-			translate: 80px -650px;
+			scale: 0.8;
+			translate: -30px -600px;
 		}
 	}
 </style>
