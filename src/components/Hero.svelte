@@ -130,6 +130,12 @@
 		font-style: italic;
 	}
 
+	/* Safari Fix */
+	.hero-text :global(.emphasize) {
+		padding-left: 0.45ch;
+		margin-left: -0.47ch;
+	}
+
 	@media screen and (max-width: 460px) {
 		h2 {
 			max-width: 32ch;
