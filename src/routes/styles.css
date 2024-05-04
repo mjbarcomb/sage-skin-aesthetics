@@ -43,22 +43,88 @@
 		}
 	}
 }
-
-.material-symbols-rounded {
-	font-family: 'Material Symbols Rounded';
-	font-weight: normal;
-	font-style: normal;
-	font-size: 24px;
-	display: inline-block;
-	line-height: 1;
-	text-transform: none;
-	letter-spacing: normal;
-	word-wrap: normal;
-	white-space: nowrap;
-	direction: ltr;
-	max-width: var(--icon-size, 1em);
-	max-height: var(--icon-size, 1em);
-	overflow: hidden;
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-weight: 200;
+	src: url('/src/lib/assets/fonts/Ogg-Thin.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-style: italic;
+	font-weight: 200;
+	src: url('/src/lib/assets/fonts/Ogg-ThinItalic.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-weight: 300;
+	src: url('/src/lib/assets/fonts/Ogg-Light.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-style: italic;
+	font-weight: 300;
+	src: url('/src/lib/assets/fonts/Ogg-LightItalic.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-weight: 400;
+	src: url('/src/lib/assets/fonts/Ogg-Regular.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-style: italic;
+	font-weight: 400;
+	src: url('/src/lib/assets/fonts/Ogg-RegularItalic.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-weight: 500;
+	src: url('/src/lib/assets/fonts/Ogg-Medium.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-style: italic;
+	font-weight: 500;
+	src: url('/src/lib/assets/fonts/Ogg-MediumItalic.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-weight: 600;
+	src: url('/src/lib/assets/fonts/Ogg-Bold.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Ogg';
+	font-style: italic;
+	font-weight: 600;
+	src: url('/src/lib/assets/fonts/Ogg-BoldItalic.woff');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Founders Grotesk';
+	font-weight: 400;
+	src: url('/src/lib/assets/fonts/FoundersGroteskWeb-Light.woff2');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Founders Grotesk';
+	font-weight: 500;
+	src: url('/src/lib/assets/fonts/FoundersGroteskWeb-Regular.woff2');
+}
+@font-face {
+	font-display: block;
+	font-family: 'Founders Grotesk';
+	font-weight: 600;
+	src: url('/src/lib/assets/fonts/FoundersGroteskWeb-Medium.woff2');
 }
 
 :root {
