@@ -167,11 +167,6 @@
 			margin-top: 0.25em;
 			max-width: 45ch;
 		}
-
-		.hero-seal {
-			scale: 0.7;
-			translate: -40px -520px;
-		}
 	}
 
 	@media screen and (max-width: 767px) and (max-height: 800px) {
@@ -208,6 +203,13 @@
 		.hero-seal {
 			translate: -70px -415px;
 			scale: 0.6;
+		}
+	}
+
+	@media screen and (min-width: 376px) and (max-width: 767px) {
+		.hero-seal {
+			scale: 0.7;
+			translate: -40px -520px;
 		}
 	}
 </style>
