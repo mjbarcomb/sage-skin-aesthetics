@@ -86,7 +86,7 @@
 		font-weight: 500;
 	}
 	p {
-		font-size: var(--text-size-200);
+		font-size: var(--text-size-100);
 		font-weight: 400;
 		margin: 0;
 	}
