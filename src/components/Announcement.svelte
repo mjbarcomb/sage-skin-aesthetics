@@ -35,6 +35,7 @@
 
 <style>
 	dialog {
+		align-content: start;
 		background-color: rgba(255, 255, 255, 0.95);
 		border: 0;
 		box-shadow: var(--shadow-elevation-high);
@@ -54,12 +55,14 @@
 	button {
 		position: absolute;
 		inset: var(--gap-sm) var(--gap-sm) auto auto;
+		padding: 0;
 		height: 42px;
 		width: 42px;
 		display: grid;
 		place-items: center;
 		border: 0;
 		background-color: transparent;
+		color: var(--color-black);
 
 		&:focus {
 			outline: 2px dotted currentColor;
