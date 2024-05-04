@@ -183,18 +183,6 @@
 		}
 	}
 
-	@media screen and (max-width: 445px) {
-		.hero-seal {
-			translate: -40px -485px;
-		}
-	}
-
-	@media screen and (min-width: 446px) and (max-width: 767px) {
-		.hero-seal {
-			translate: -20px -535px;
-		}
-	}
-
 	@media screen and (min-width: 768px) and (max-width: 1000px) {
 		.hero-image {
 			translate: -100px 80px;
@@ -212,6 +200,18 @@
 		.hero-seal {
 			scale: 0.8;
 			translate: -30px -600px;
+		}
+	}
+
+	@media screen and (max-width: 445px) {
+		.hero-seal {
+			translate: -40px -485px;
+		}
+	}
+
+	@media screen and (min-width: 446px) and (max-width: 767px) {
+		.hero-seal {
+			translate: -20px -535px;
 		}
 	}
 </style>
