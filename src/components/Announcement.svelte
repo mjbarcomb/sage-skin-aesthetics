@@ -89,7 +89,6 @@
 		font-size: var(--text-size-200);
 		font-weight: 400;
 		margin: 0;
-		padding-right: 40px;
 	}
 	@media screen and (max-width: 767px) {
 		dialog {
